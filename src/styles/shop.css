@@ -1,0 +1,106 @@
+
+.setup
+{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    justify-content: stretch;
+
+    gap: 20px;
+    max-width: 1400px;
+    width: 100%;
+    margin: 15px auto;
+}
+
+.guitars
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+    height: 189px;
+
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: rgba(236, 243, 197, 0.2);
+    border: 1px solid black;
+}
+
+.guitars img {
+    width: auto;
+    height: 185px;
+    object-fit: contain;
+}
+
+.Text h2{
+    text-align: center;
+    color: antiquewhite;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.Text p {
+    font-size: 25px;
+    margin-left: 45px;
+    color: antiquewhite;
+}
+
+.Text img{
+    width: 30px;
+    height: 30px;
+}
+.bagy
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+}
+
+.bagy a{
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 17px;
+    padding: 5px 10px;   
+    color: white;
+
+    background-color: wheat;
+    border-radius: 15px;
+    background: rgba(217, 217, 217, 0.2);
+    transition: 0.3s; 
+
+}
+.bagy a:hover {
+    transform: scale(1.1); 
+} 
+
+@media (max-width: 768px) {
+
+    .setup {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+    }
+
+    .guitars, .accesiourss {
+        height: auto;
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .guitars img, .accesiourss img {
+        height: 120px;
+    }
+
+    .Text h2 {
+        font-size: 14px;
+    }
+
+    .Text p {
+        font-size: 16px;
+        margin-left: 0;
+        text-align: center;
+    }
+}

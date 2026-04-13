@@ -1,0 +1,92 @@
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: stretch;
+    gap: 15px;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: pointer;
+    aspect-ratio: 16/9;
+}
+
+/* картинка */
+.card img {
+    width: 150%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.3s;
+}
+
+/* overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    padding: 15px;
+
+    opacity: 0;
+    transition: 0.3s;
+}
+
+/* заголовок */
+.overlay h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #D9FF00;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);}
+
+/* текст */
+.overlay p {
+    font-size: 16px;
+    color: #D9FF00;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    margin-top: 8px;
+}
+
+/* hover */
+.card:hover .overlay {
+    opacity: 1;
+}
+
+/* эффект увеличения */
+.card:hover img {
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .overlay h2 {
+        font-size: 16px;
+    }
+
+    .overlay p {
+        font-size: 12px;
+    }
+}

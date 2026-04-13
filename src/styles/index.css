@@ -1,0 +1,78 @@
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap:25px
+
+}
+.text{
+    font-family:'Times New Roman', Times, serif;
+    width: 60%;
+    line-height: 1.6;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+}
+
+.videoo {
+    border-radius: 20px;
+    overflow: hidden; /* 🔥 ВАЖНО */
+}
+
+.videoo video {
+    width: 100%;
+    display: block;
+}
+
+.text2{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 19px;
+    background: rgb(0,0,0,0.4);
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+ .shop
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+
+.shop a{
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding: 5px 10px;   
+    color: white;
+
+    background-color: wheat;
+    border-radius: 15px;
+    background: rgba(217, 217, 217, 0.2);
+    transition: 0.3s; 
+
+}
+.shop a:hover {
+    transform: scale(1.1); 
+} 
+
+@media (max-width: 768px) {
+
+    .row {
+        flex-direction: column;
+    }
+
+    .text, .text2 {
+        width: 100%;
+    }
+
+    .videoo video {
+        width: 100%;
+    }
+}
